@@ -1,0 +1,2 @@
+# phone-validation
+Forms are only as good as the data they accept and that's where validation comes in. There are various kinds of validation. In one case, you may just want to make sure the email input was filled out. In another, you want it filled out and to make sure it is valid and contains an @ symbol. What you don't see often is telephone number validation because it's difficult. Not anymore. This tutorial will teach you how to add validation to your phone number input fields using jQuery.

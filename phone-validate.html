@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+<link rel="stylesheet" href="phone-validate.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.caret/0.1/jquery.caret.js"></script>
+<script src="https://www.solodev.com/assets/phone/jquery.mobilePhoneNumber.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+jQuery(function($){
+      var input = $('[type=tel]')
+      input.mobilePhoneNumber({allowPhoneWithoutPrefix: '+1'});
+      input.bind('country.mobilePhoneNumber', function(e, country) {
+        $('.country').text(country || '')
+      })
+	});
+});
+</script>
+
+<div class="container">
+<div class="well">
+   <div class="row">
+      <div class="col-md-3">
+         <label class="control-label">Country:</label>
+         <div class="country"></div>
+      </div>
+      <div class="col-md-3">
+         <input type="tel" class="tel form-control" pattern="\d*" x-autocompletetype="tel" placeholder="Mobile Phone Number" autofocus>
+      </div>
+      <div class="col-md-6">
+      </div>
+   </div>
+   </div>
+</div>
